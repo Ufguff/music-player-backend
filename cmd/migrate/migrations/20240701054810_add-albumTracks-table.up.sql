@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS albumTracks (
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `trackID` INT UNSIGNED NOT NULL,
+    `albumID` INT UNSIGNED NOT NULL,
+
+    PRIMARY KEY (`id`),
+    FOREIGN KEY(`trackID`) REFERENCES tracks(`id`),
+    FOREIGN KEY(`albumID`) REFERENCES albums(`id`)
+);
